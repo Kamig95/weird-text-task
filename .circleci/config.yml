@@ -45,3 +45,14 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - build-and-test
+
+deploy:
+  executor: heroku/default
+  steps:
+    - checkout
+    - add_ssh_keys:
+        fingerprints:
+          - '48:a0:87:54:ca:75:32:12:c6:9e:a2:77:a4:7a:08:a4'
+    - heroku/install
+    - heroku/deploy-via-git:
+        force: true
