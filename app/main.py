@@ -18,8 +18,3 @@ def decode_endpoint():
     except WrongEncodedMessageException as e:
         return str(e), 400
     return decoded_text
-
-
-@app.route("/")
-def root():
-    return "Welcome"
