@@ -13,3 +13,8 @@ def encode_endpoint():
 def decode_endpoint():
     text = request.args.get("text")
     return decode(text)
+
+
+@app.route("/")
+def root():
+    return "Welcome"

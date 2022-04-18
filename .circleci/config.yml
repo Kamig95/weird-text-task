@@ -10,6 +10,7 @@ orbs:
   # so you dont have to copy and paste it everywhere.
   # See the orb documentation here: https://circleci.com/developer/orbs/orb/circleci/python
   python: circleci/python@1.5.0
+  heroku: circleci/heroku@1.2.6 # Use the Heroku orb in your config
 
 # Define a job to be invoked later in a workflow.
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
@@ -45,14 +46,12 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - build-and-test
-
-deploy:
-  executor: heroku/default
-  steps:
-    - checkout
-    - add_ssh_keys:
-        fingerprints:
-          - '48:a0:87:54:ca:75:32:12:c6:9e:a2:77:a4:7a:08:a4'
-    - heroku/install
-    - heroku/deploy-via-git:
-        force: true
+  heroku_deploy:
+    jobs:
+      - build
+      - heroku/deploy-via-git:
+          requires:
+            - build # only run deploy-via-git job if the build job has completed
+          filters:
+            branches:
+              only: master # only run deploy-via-git job on main branch
