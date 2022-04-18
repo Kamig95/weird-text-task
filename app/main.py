@@ -1,5 +1,5 @@
 from flask import Flask, request
-# from weird_text import encode, decode
+from weird_text import encode, decode
 
 app = Flask(__name__)
 
