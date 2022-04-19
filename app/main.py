@@ -1,7 +1,8 @@
 from typing import Final
 
 from flask import Flask, request
-from weird_text import encode, decode
+
+from weird_text import decode, encode
 from weird_text.exceptions import WrongEncodedMessageException
 
 app = Flask(__name__)

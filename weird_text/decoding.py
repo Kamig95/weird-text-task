@@ -1,8 +1,8 @@
 from collections import Counter
 
-from weird_text.exceptions import WrongEncodedMessageException
-from weird_text.utils import get_words, get_middle_part
 from weird_text.encoding import MAGIC_WORD
+from weird_text.exceptions import WrongEncodedMessageException
+from weird_text.utils import get_middle_part, get_words
 
 
 def decode(encoded_text: str) -> str:
@@ -15,7 +15,9 @@ def decode(encoded_text: str) -> str:
     text_parts = encoded_text.split(MAGIC_WORD)
     if len(text_parts) != 3:
         raise WrongEncodedMessageException(
-            repr(f"Wrong input format. Use WeirdText format: {MAGIC_WORD}decoded text{MAGIC_WORD}sorted changed words")
+            repr(
+                f"Wrong input format. Use WeirdText format: {MAGIC_WORD}decoded text{MAGIC_WORD}sorted changed words"
+            )
         )
 
     encoded_part = text_parts[1]

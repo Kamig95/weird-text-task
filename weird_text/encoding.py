@@ -1,7 +1,7 @@
 import random
 from typing import Final, List, Tuple
 
-from weird_text.utils import get_words, get_middle_part
+from weird_text.utils import get_middle_part, get_words
 
 MAGIC_WORD: Final[str] = "\n—weird—\n"
 
