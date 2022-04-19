@@ -45,7 +45,9 @@ jobs:
 workflows:
   main-workflow:
     jobs:
-      - github-super-linter/lint
+      - github-super-linter/lint:
+          env:
+            VALIDATE_PYTHON_ISORT: false
       - build-and-test:
           requires:
             - github-super-linter/lint
