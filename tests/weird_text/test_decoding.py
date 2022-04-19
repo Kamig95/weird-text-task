@@ -1,8 +1,6 @@
 import pytest
 
-from weird_text import decode, encode
-
-from weird_text.exceptions import WrongEncodedMessageException
+from weird_text import WrongEncodedMessageException, decode, encode
 
 
 @pytest.mark.parametrize(
