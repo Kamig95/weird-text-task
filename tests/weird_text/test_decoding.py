@@ -1,6 +1,7 @@
 import pytest
 
 from weird_text import decode, encode
+
 from weird_text.exceptions import WrongEncodedMessageException
 
 
