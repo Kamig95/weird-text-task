@@ -1,8 +1,9 @@
-from unittest.mock import MagicMock, patch
-
 import pytest
 
-from weird_text import encode, shuffle
+from unittest.mock import MagicMock, patch
+
+from weird_text import encode
+from weird_text.encoding import shuffle
 
 
 @pytest.mark.parametrize(
