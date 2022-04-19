@@ -1,10 +1,8 @@
+from collections import Counter
+
 from weird_text.encoding import MAGIC_WORD
 from weird_text.exceptions import WrongEncodedMessageException
 from weird_text.utils import get_middle_part, get_words
-
-from collections import Counter
-
-
 
 
 def decode(encoded_text: str) -> str:

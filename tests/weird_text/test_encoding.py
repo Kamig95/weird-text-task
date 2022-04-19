@@ -1,6 +1,6 @@
-import pytest
-
 from unittest.mock import MagicMock, patch
+
+import pytest
 
 from weird_text import encode
 from weird_text.encoding import shuffle
