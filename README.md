@@ -13,7 +13,7 @@ Request to decode text: `\n—weird—\nTihs is a lnog lnooog tset setnncee, \nw
 [https://weird-text-task.herokuapp.com/v1/decode?text=%0A%E2%80%94weird%E2%80%94%0ATihs%20is%20a%20lnog%20lnooog%20tset%20setnncee%2C%20%0Awtih%20smoe%20big%20%28biiiiig%29%20wdors%21%21%0A%E2%80%94weird%E2%80%94%0Along%20looong%20sentence%20some%20test%20This%20with%20words](https://weird-text-task.herokuapp.com/v1/decode?text=%0A%E2%80%94weird%E2%80%94%0ATihs%20is%20a%20lnog%20lnooog%20tset%20setnncee%2C%20%0Awtih%20smoe%20big%20%28biiiiig%29%20wdors%21%21%0A%E2%80%94weird%E2%80%94%0Along%20looong%20sentence%20some%20test%20This%20with%20words)
 
 ## Run locally
-Run the virtual environment in the root folder 
+Run the virtual environment in the root folder
 ```shell
 pipenv shell
 ```
